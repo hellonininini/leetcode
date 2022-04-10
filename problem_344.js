@@ -1,7 +1,6 @@
 /**
- * @param {character[]} s
- * @return {void} Do not return anything, modify s in-place instead.
- * https://leetcode.com/problems/reverse-string/
+ * 思路:
+ *  前後各放一個標記，兩位置互換
  */
 var reverseString = function(s) {
   let start = 0;
