@@ -1,0 +1,7 @@
+{
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.arrowParens": "always",
+    "prettier.trailingComma": "none",
+    "prettier.quoteProps": "preserve"
+}
