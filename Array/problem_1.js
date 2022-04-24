@@ -2,7 +2,7 @@
 
 
 // 暴力解
-var twoSum = function(nums, target) {
+const twoSum1 = function(nums, target) {
   for (let i = 0; i < nums.length; i++) {
     const current = nums[i];
     const index = nums.indexOf(target - current);
@@ -13,7 +13,7 @@ var twoSum = function(nums, target) {
 };
 
 // memory too big
-var twoSum = function(nums, target) {
+const twoSum2 = function(nums, target) {
   let map = {};
   for (let i = 0; i < nums.length; i++) {
     const current = nums[i];

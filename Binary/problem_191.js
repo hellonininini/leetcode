@@ -3,7 +3,7 @@
  *  1. 先將input轉為二進位不補滿32位元
  *  2. 依序算有多少個1
  */
-const hammingWeight = (n) => {
+const hammingWeight1 = (n) => {
     let count = 0;
     const binary = n.toString(2);
     for (let i = 0; i < binary.length; i++) {
@@ -20,7 +20,7 @@ const hammingWeight = (n) => {
  *  1. n與2取餘數如果為1 count增加
  *  2. 算到n=0就跳出
  */
-const hammingWeight = (n) => {
+const hammingWeight2 = (n) => {
     let count = 0;
     while (n) {
         if (n % 2 == 1) {
@@ -42,7 +42,7 @@ const hammingWeight = (n) => {
  *  第二輪 0100 & 1 -> 0 -> count + 0 -> 右移 0010
  *  以此類推
  */
-const hammingWeight = (n) => {
+const hammingWeight3 = (n) => {
     let count = 0;
     for (let i = 0; i < 32; i++) {
         count += n & 1;

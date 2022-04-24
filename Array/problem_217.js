@@ -2,7 +2,7 @@
  * 思路:
  *  沒有存在列表的就放進obj中，一旦遇到重複就return
  */
- const containsDuplicate = (nums) => {
+ const containsDuplicate1 = (nums) => {
     // use too many memory
     const numMap = {};
     for (let i = 0; i < nums.length; i++) {
@@ -19,7 +19,7 @@
  * 思路:
  *  set中不能有重複值
  */
-const containsDuplicate = (nums) => {
+const containsDuplicate2 = (nums) => {
     const set = new Set(nums);
 
     return set.size != nums.length ? true : false;
