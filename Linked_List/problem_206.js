@@ -17,7 +17,6 @@
         prev = head;
         head = tmp;
     }
-    console.log(prev)
 
     return prev;
 };
