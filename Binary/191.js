@@ -8,7 +8,7 @@ const hammingWeight1 = (n) => {
     const binary = n.toString(2);
     for (let i = 0; i < binary.length; i++) {
         if (binary[i] == 1) {
-            count ++;
+            count++;
         }
     }
 
@@ -24,19 +24,19 @@ const hammingWeight2 = (n) => {
     let count = 0;
     while (n) {
         if (n % 2 == 1) {
-            count ++;
+            count++;
         }
         n = parseInt(n / 2);
     }
 
     return count;
-}
+};
 
 /**
  * 思路:
  *  1. 用二進位與1比對
  *  2. 向右位移將已算過的位數濾掉
- *  
+ *
  *  ex: 輸入9 -> 1001
  *  第一輪 1001 & 1 -> 1 -> count + 1 -> 右移 0100
  *  第二輪 0100 & 1 -> 0 -> count + 0 -> 右移 0010
@@ -50,4 +50,4 @@ const hammingWeight3 = (n) => {
     }
 
     return count;
-}
+};

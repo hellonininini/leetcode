@@ -5,7 +5,7 @@
  *  先定義node.next再將node補回prev中
  *  往node下一層繼續操作直到遇到null
  */
- const reverseList = (head) => {
+const reverseList = (head) => {
     if (head === null || head.next === null) {
         return head;
     }

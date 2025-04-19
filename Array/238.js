@@ -8,13 +8,13 @@
  *          左右陣列相乘便會得到除了自己本身以外的乘積 [1*(1*c*d)*b, (1*a)*(1*d)*c, (1*a)*b*(1)*d, (1*a*b)*c*1]
  */
 
-const productExceptSelf1 = function(nums) {
+const productExceptSelf1 = function (nums) {
     const leftArr = [];
     const rightArr = [];
     let leftValue = 1;
     let rightValue = 1;
     const result = [];
-    
+
     for (let i = 0; i < nums.length; i++) {
         leftArr[i] = leftValue;
         leftValue *= nums[i];
@@ -28,7 +28,7 @@ const productExceptSelf1 = function(nums) {
     for (let i = 0; i < nums.length; i++) {
         result[i] = leftArr[i] * rightArr[i];
     }
-   
+
     return result;
 };
 
@@ -37,11 +37,11 @@ const productExceptSelf1 = function(nums) {
  *  基於以上版本做調整
  *  1. 只宣告一個陣列儲存乘積
  */
-const productExceptSelf2 = function(nums) {
+const productExceptSelf2 = function (nums) {
     let leftValue = 1;
     let rightValue = 1;
     const result = [];
-    
+
     for (let i = 0; i < nums.length; i++) {
         result[i] = leftValue;
         leftValue *= nums[i];
@@ -49,8 +49,8 @@ const productExceptSelf2 = function(nums) {
 
     for (let j = nums.length - 1; j >= 0; j--) {
         result[j] *= rightValue;
-        rightValue *= nums[j]; 
+        rightValue *= nums[j];
     }
-   
+
     return result;
 };

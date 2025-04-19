@@ -1,4 +1,4 @@
-var isSameTree = function(p, q) {
+var isSameTree = function (p, q) {
     if (!p && !q) {
         return true;
     }

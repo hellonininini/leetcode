@@ -3,13 +3,15 @@
  *  正序排列後n的index代表有多少小於n的數量
  */
 // use too many memory
-const smallerNumbersThanCurrent = function(nums) {
-    const sortArr = [...nums].sort((a, b) => {return a - b;});
+const smallerNumbersThanCurrent = function (nums) {
+    const sortArr = [...nums].sort((a, b) => {
+        return a - b;
+    });
     const arr = [];
     const indexMap = {};
     sortArr.forEach((num, index) => {
         if (!indexMap.hasOwnProperty(num)) {
-            indexMap[num] = index; 
+            indexMap[num] = index;
         }
     });
     for (let i = 0; i < nums.length; i++) {

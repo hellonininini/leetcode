@@ -5,17 +5,17 @@
  *  如果目前字元沒有存的maxString中
  *  放入maxString，max, maxString長度比大小，較大者放入max
  */
-const lengthOfLongestSubstring = function(s) {
+const lengthOfLongestSubstring = function (s) {
     let maxLength = 0;
-    let maxString = '';
+    let maxString = "";
 
     for (let i = 0; i < s.length; i++) {
         if (maxString.indexOf(s[i]) > -1) {
-           maxString = maxString.substring(maxString.indexOf(s[i]) + 1);
+            maxString = maxString.substring(maxString.indexOf(s[i]) + 1);
         }
         maxString += s[i];
         maxLength = Math.max(maxString.length, maxLength);
     }
 
-    return maxLength
+    return maxLength;
 };

@@ -2,12 +2,12 @@
  * 思路:
  *  沒有存在列表的就放進obj中，一旦遇到重複就return
  */
- const containsDuplicate1 = (nums) => {
+const containsDuplicate1 = (nums) => {
     // use too many memory
     const numMap = {};
     for (let i = 0; i < nums.length; i++) {
         if (numMap[nums[i]]) {
-           return true;
+            return true;
         } else {
             numMap[nums[i]] = true; // save memory use boolean
         }

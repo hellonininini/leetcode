@@ -13,8 +13,6 @@ const maxSubArray1 = (nums) => {
     return Math.max(...nums);
 };
 
-
-
 /**
  * 思路:
  *  1. 與第一個解法相同
@@ -23,13 +21,13 @@ const maxSubArray1 = (nums) => {
 const maxSubArray2 = (nums) => {
     let max = nums[0];
     let pre = nums[0];
-  
+
     for (let i = 1; i < nums.length; i++) {
-      pre = Math.max(nums[i], pre + nums[i]);
-      max = Math.max(max, pre);
+        pre = Math.max(nums[i], pre + nums[i]);
+        max = Math.max(max, pre);
     }
 
     return max;
-}
+};
 
 // 較為複雜解法，待研究 -> https://leetcode.com/problems/maximum-subarray/discuss/364839/Divide-and-Conquer-Commented-Explanation-and-Big-O-(JS)
